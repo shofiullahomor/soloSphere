@@ -11,6 +11,7 @@ const JobCard = ({ job }) => {
     max_price,
     description,
     title,
+    bid_count,
     _id,
   } = job || {};
   return (
@@ -36,7 +37,9 @@ const JobCard = ({ job }) => {
         <p className="mt-2 text-sm font-bold text-gray-600 ">
           Range: ${min_price} - ${max_price}
         </p>
-        <p className="mt-2 text-sm font-bold text-gray-600 ">Total Bids: 0</p>
+        <p className="mt-2 text-sm font-bold text-gray-600 ">
+          Total Bids: {bid_count}
+        </p>
       </div>
     </Link>
   );
